@@ -18,8 +18,8 @@ list(
       case_when_expr = dplyr::case_when(
         age < 25 ~ "young adult",
         age >= 25 & age < 40 ~ "adult",
-        age >= 40 & age < 60 ~ "middle age",
-        age >= 60 ~ "elderly"
+        age >= 40 & age < 65 ~ "middle age",
+        age >= 65 ~ "elderly"
       )
     )
   ) ,
