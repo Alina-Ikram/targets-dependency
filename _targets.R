@@ -11,7 +11,6 @@ list(
     supraclavicular_data,
     read.csv("data/supraclavicular.csv")
   ),
-  
   tar_target(age_cat,
     categorize_variable(
       supraclavicular_data,
@@ -24,7 +23,6 @@ list(
       )
     )
   ) ,
-  
   tar_target(bmi_cat,
     categorize_variable(
       supraclavicular_data,
@@ -36,22 +34,13 @@ list(
       )
     )
   ),
-  
   tar_target(
     bmi_by_age_summary,
     summarize_by_group(age_cat, age_category, bmi)
   ),
-  
-  
   tar_target(
     bmi_by_age_plot,
     plot_summary(bmi_by_age_summary, age_category, title = "Mean BMI by Age Category", y_label = "Mean BMI")
   ),
-  
-  tar_target(
-    vps_rest_by_bmi_summary,
-    summarize_by_group(bmi_cat, bmi_category, vps_rest)
-  )
-  
-
+ 
 )
