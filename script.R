@@ -10,3 +10,8 @@ library(medicaldata)
 library(visNetwork)
 tar_script()
 tar_visnetwork()
+
+library(medicaldata)
+write.csv(medicaldata::supraclavicular, "data/supraclavicular.csv", row.names = FALSE)
+df <- read.csv("data/supraclavicular.csv")
+View(df)

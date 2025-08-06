@@ -8,7 +8,8 @@ source("functions.R")
 
 list(
   tar_target(
-    supraclavicular_data, medicaldata::supraclavicular
+    supraclavicular_data,
+    read.csv("data/supraclavicular.csv")
   ),
   
   tar_target(age_cat,
